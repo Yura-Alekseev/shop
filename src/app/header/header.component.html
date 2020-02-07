@@ -1,0 +1,32 @@
+<header class="header-bg">
+  <div class="wrapper">
+    <div class="user">
+      <a class="user-wrapper" [routerLink]="'/user'"
+        [ngStyle]="{
+          cursor: auth.isAuthenticated() ? 'pointer' : 'default'
+        }"
+      >
+        <img class="user-logo" src="./assets/logos/user-logo.png" alt="user-logo">
+        <span class="user-name">{{getUserName()}}</span>
+      </a>
+
+      <div class="user-btn" [routerLink]="'/login'">
+        <button type="button" *ngIf="auth.isAuthenticated(); else login" class="logout-btn" (click)="logout()">logout</button>
+         <ng-template #login>
+           <button type="button" class="login-btn">login</button>
+         </ng-template>
+      </div>
+    </div>
+
+    <a class="shop-btn" [routerLink]="'/'">Shop</a>
+
+    <a class="basket" [routerLink]="'/cart'">
+      <img class="basket-logo" src="./assets/logos/basket-logo.png" alt="basket-logo">
+      <div class="basket-count-wrapper">
+        <span class="basket-count"
+        >{{getCount()}}</span>
+        <span class="summary-value">{{getTotal()}} $</span>
+      </div>
+    </a>
+  </div>
+</header>

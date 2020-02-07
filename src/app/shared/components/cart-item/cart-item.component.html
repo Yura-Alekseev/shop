@@ -1,0 +1,29 @@
+<div class="cart-item">
+  <img class="image" [src]="cartItem.img" alt="product-item">
+
+  <div class="main">
+    <span class="name">{{cartItem.name}}</span>
+
+    <div class="row">
+      <span class="cost">{{cartItem.cost}} $</span>
+
+      <div class="quantity">
+        <span class="minus" (click)="decCount()">-</span>
+        <span
+          class="value"
+        >{{cartItem.count}}</span>
+        <span class="plus" (click)="incCount()">+</span>
+      </div>
+
+      <div class="price">
+        <span class="title">Price :</span>
+        <span class="value">{{cartItem.value}} $</span>
+      </div>
+
+      <button class="delete" (click)="removeItem(cartItem.id)">
+        <img src="./assets/logos/delete-btn.png" alt="delete">
+      </button>
+    </div>
+  </div>
+</div>
+

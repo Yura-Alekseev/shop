@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <h2 class="title">Shop</h2>
+
+  <div class="products">
+    <app-product-item
+      class="product-item"
+      *ngFor="let item of cartService.products"
+      [productItem]="item"
+    ></app-product-item>
+  </div>
+</div>

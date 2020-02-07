@@ -1,0 +1,294 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 800px;
+  margin: 30px 0 0;
+  padding: 0 10px 30px 10px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  margin-right: 16px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  margin-bottom: 16px;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 26px;
+  color: #323232;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cost {
+  padding: 5px 15px;
+  background: #F2F53B;
+  border-radius: 30px;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin-right: 40px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  margin-right: 180px;
+
+
+  .value {
+    width: 60px;
+    background: #ffffff;
+    border: 1px solid #353535;
+    padding: 0 5px;
+    margin: 0 10px;
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+  }
+
+  .value::-webkit-outer-spin-button,
+  .value::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .value[type=number] {
+    -moz-appearance:textfield;
+  }
+}
+
+.minus,
+.plus {
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 20px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+
+  .title {
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 24px;
+    color: #323232;
+    margin-right: 10px;
+  }
+
+  .value {
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 24px;
+    color: #000000;
+  }
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1023px) {
+  .cart-item {
+    width: 700px;
+    margin: 30px 0 0;
+    padding: 0 10px 30px 10px;
+  }
+
+  .image {
+    width: 80px;
+    height: 80px;
+    margin-right: 14px;
+  }
+
+  .name {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .cost {
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-right: 50px;
+  }
+
+  .quantity {
+    width: 80px;
+    margin-right: 140px;
+
+    .value {
+      width: 40px;
+      padding: 0 5px;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+  }
+
+  .minus,
+  .plus {
+    font-size: 20px;
+  }
+
+  .price {
+    width: 230px;
+
+    .title {
+      font-size: 22px;
+      margin-right: 10px;
+    }
+
+    .value {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cart-item {
+    width: 420px;
+    margin: 20px 0 0;
+    padding: 0 10px 20px 10px;
+  }
+
+  .image {
+    width: 70px;
+    height: 70px;
+    margin-right: 14px;
+  }
+
+  .name {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .cost {
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-right: 15px;
+  }
+
+  .quantity {
+    width: 60px;
+    margin-right: 15px;
+
+    .value {
+      width: 30px;
+      padding: 0 4px;
+      margin: 0 5px;
+      font-size: 14px;
+    }
+  }
+
+  .minus,
+  .plus {
+    font-size: 16px;
+  }
+
+  .price {
+    width: 130px;
+
+    .title {
+      font-size: 16px;
+      margin-right: 6px;
+    }
+
+    .value {
+      font-size: 16px;
+    }
+  }
+
+  .delete img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  .cart-item {
+    width: 300px;
+    margin: 20px 0 0;
+    padding: 0 10px 20px 10px;
+  }
+
+  .image {
+    width: 70px;
+    height: 70px;
+    margin-right: 12px;
+  }
+
+  .name {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .cost {
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 10px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+  }
+
+  .quantity {
+    width: 50px;
+    margin-right: 0;
+    margin-bottom: 15px;
+
+    .value {
+      width: 30px;
+      padding: 0 4px;
+      margin: 0 5px;
+      font-size: 12px;
+    }
+  }
+
+  .minus,
+  .plus {
+    font-size: 16px;
+  }
+
+  .price {
+    width: 170px;
+
+    .title {
+      font-size: 16px;
+      margin-right: 6px;
+    }
+
+    .value {
+      font-size: 16px;
+    }
+  }
+
+  .delete img {
+    width: 12px;
+    height: 12px;
+  }
+}

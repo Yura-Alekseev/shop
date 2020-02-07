@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <h2 class="title">Cart</h2>
+
+  <div class="products"
+       [ngStyle]="{
+       borderBottom: cartService.cartItems.length === 0 ? 'none': '1px solid #000000'
+       }"
+  >
+    <app-cart-item
+      class="cart"
+      *ngFor="let item of cartService.cartItems"
+      [cartItem]="item"
+    ></app-cart-item>
+  </div>
+
+  <div
+    class="row" *ngIf="cartService.cartItems.length > 0; else nothingShow">
+    <button class="clear" type="button" (click)="clearCart()">clear cart</button>
+
+    <div class="total">
+      <span class="total-title">Total price :</span>
+      <span class="value">{{getTotal()}} $</span>
+    </div>
+  </div>
+
+  <ng-template #nothingShow>
+    <div class="sub-wrapper">
+      <h3 class="sub-title">Nothing here yet</h3>
+      <a class="link" [routerLink]="'/'">Go to store</a>
+    </div>
+  </ng-template>
+</div>

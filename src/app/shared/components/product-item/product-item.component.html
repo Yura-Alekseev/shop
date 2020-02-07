@@ -1,0 +1,26 @@
+<div class="product-item">
+  <img class="image" [src]="productItem.img" alt="product-item">
+
+  <div class="main">
+    <span class="name">{{productItem.name}}</span>
+
+    <div class="row">
+      <span
+        class="cost">{{productItem.cost}} $</span>
+
+      <button
+        class="btn" type="button"
+        (click)="submit()"
+        [disabled]="productItem.isAdded || !auth.isAuthenticated()"
+        [ngStyle]="{
+          cursor: !auth.isAuthenticated() ? 'not-allowed' : 'pointer'
+        }"
+      >
+        <span *ngIf="!productItem.isAdded; else isAdded">add to cart</span>
+        <ng-template #isAdded>
+          <span [routerLink]="'/cart'">in cart</span>
+        </ng-template>
+      </button>
+    </div>
+  </div>
+</div>

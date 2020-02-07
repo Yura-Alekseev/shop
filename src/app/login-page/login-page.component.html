@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <h2 class="title">Login</h2>
+
+  <form class="form"  [formGroup]="form" (ngSubmit)="submit()">
+    <span *ngIf="auth.error$ | async as error" class="error">
+      {{error}}
+    </span>
+
+    <div class="input-wrapper">
+      <input
+        class="input"
+        type="email"
+        placeholder="E-mail"
+        [formControlName]="'email'"
+      >
+      <div class="validation" *ngIf="form.get('email').invalid && form.get('email').touched">
+        <span *ngIf="form.get('email').errors.required">Поле email не может быть пустым</span>
+        <span *ngIf="form.get('email').errors.email">Введите корректный email</span>
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <input
+        class="input"
+        type="password"
+        placeholder="Password"
+        [formControlName]="'password'"
+      >
+
+      <div class="validation"  *ngIf="form.get('password').invalid && form.get('password').touched">
+        <span *ngIf="form.get('password').errors.required">Пароль не может быть пустым</span>
+        <span *ngIf="form.get('password').errors.pattern">Пароль должен содержать цифры или специальные символы, заглавные и прописные буквы и быть не менее 8 символов</span>
+      </div>
+    </div>
+    <div class="row">
+      <button class="registration-btn" type="button" [routerLink]="'/registration'">Sign Up</button>
+      <button class="login-btn" type="submit" [disabled]="form.invalid || submitted">Login</button>
+    </div>
+  </form>
+</div>
+

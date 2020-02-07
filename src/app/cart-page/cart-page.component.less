@@ -1,0 +1,289 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1024px;
+  padding: 75px 0;
+}
+
+.title {
+  margin: 0 0 25px 90px;
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 40px;
+  color: #353535;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #000000;
+}
+
+.sub-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.sub-title {
+  margin-bottom: 30px;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 60px;
+  color: #000000;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 56px;
+  background: #E7EB25;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 90px 0;
+}
+
+.clear {
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 24px;
+  color: #000000;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .total-title {
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 30px;
+    color: #000000;
+    margin-right: 10px;
+  }
+
+  .value {
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 30px;
+    color: #000000;
+  }
+}
+
+.cart {
+  border-bottom: 1px solid #000000;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 1365px) {
+  .wrapper {
+    width: 840px;
+    padding: 70px 0;
+  }
+
+  .title {
+    margin: 0 0 25px 70px;
+    font-size: 40px;
+  }
+
+  .sub-wrapper {
+    padding-top: 50px;
+  }
+
+  .sub-title {
+    margin-bottom: 30px;
+    font-size: 54px;
+  }
+
+  .link {
+    width: 180px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+  }
+
+  .row {
+    padding: 10px 70px 0;
+  }
+
+  .clear {
+    font-size: 20px;
+  }
+
+  .total {
+    .total-title {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+
+    .value {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    width: 720px;
+    padding: 60px 0;
+  }
+
+  .title {
+    margin: 0 0 25px 60px;
+    font-size: 36px;
+  }
+
+  .sub-wrapper {
+    padding-top: 40px;
+  }
+
+  .sub-title {
+    margin-bottom: 26px;
+    font-size: 46px;
+  }
+
+  .link {
+    width: 160px;
+    height: 46px;
+    border-radius: 30px;
+    font-size: 18px;
+  }
+
+  .row {
+    padding: 10px 70px 0;
+  }
+
+  .clear {
+    font-size: 20px;
+  }
+
+  .total {
+    .total-title {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .value {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    width: 440px;
+    padding: 40px 0;
+  }
+
+  .title {
+    margin: 0 0 25px 40px;
+    font-size: 32px;
+  }
+
+  .sub-wrapper {
+    padding-top: 30px;
+  }
+
+  .sub-title {
+    margin-bottom: 20px;
+    font-size: 38px;
+  }
+
+  .link {
+    width: 140px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+
+  .row {
+    padding: 10px 30px 0;
+  }
+
+  .clear {
+    font-size: 20px;
+  }
+
+  .total {
+    .total-title {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .value {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .wrapper {
+    width: 300px;
+    padding: 30px 0;
+  }
+
+  .title {
+    margin: 0 0 25px 16px;
+    font-size: 28px;
+  }
+
+  .sub-wrapper {
+    padding-top: 20px;
+  }
+
+  .sub-title {
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
+
+  .link {
+    width: 120px;
+    height: 34px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+
+  .row {
+    padding: 10px 16px 0;
+  }
+
+  .clear {
+    font-size: 14px;
+  }
+
+  .total {
+    .total-title {
+      font-size: 14px;
+      margin-right: 6px;
+    }
+
+    .value {
+      font-size: 14px;
+    }
+  }
+}
